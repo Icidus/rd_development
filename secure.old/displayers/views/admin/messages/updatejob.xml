@@ -1,0 +1,11 @@
+<message>
+	<preview>update job priority</preview>
+	<template>
+{{xmlDecl}}
+<updateJob>
+    <jobSummary id="{jobId}">
+        <priority>{jobPriority}</priority>
+    </jobSummary>
+</updateJob>
+</template>
+</message>

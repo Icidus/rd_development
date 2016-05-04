@@ -1,0 +1,7 @@
+<message>
+	<preview>delete a timed job</preview>
+	<template>
+{{xmlDecl}}
+<deleteTimedJob id="{jobId}"></deleteTimedJob>
+</template>
+</message>

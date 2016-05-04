@@ -1,0 +1,7 @@
+<message>
+	<preview>retry a job</preview>
+	<template>
+{{xmlDecl}}
+<retryJob id="{jobId}"></retryJob>
+</template>
+</message>

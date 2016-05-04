@@ -1,0 +1,1862 @@
+/* 
+ReservesDirect Style Sheet  
+ReserveStyles.css
+
+Sample style sheet for Open Source distribution.
+
+Last Modified 11/26/2005
+*/
+
+/*jthurtea added for thickbox / IE issues */
+#TB_ajaxContent {}
+#TB_ajaxContent * {font-size:12px;font-weight:bold;}
+* html #TB_ajaxContent * {font-size:11px;line-height:1.4em;}
+
+/*
+ ************************************************* 
+ DEFAULT HTML TAG DEFINITIONS 
+ ************************************************* 
+*/
+
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+    margin:0;
+    padding:0;
+    color:#000000;
+    font-size:small;
+}
+
+p {
+	font-style: normal;
+	font-size: small;
+}
+tr {
+	font-size: small;
+}
+td {
+	font-size: small;
+}
+h1 {
+	color: #333399;
+	font-size: 24px;
+	text-align: left;
+	font-variant: small-caps;
+}
+h2 {
+	color: #000066;
+	font-size: 16px;
+	text-transform: capitalize;
+}
+h3 {
+	text-transform: uppercase;
+	color: #990033;
+	font-size: 16px;
+} 
+a:link {
+	color: #0000FF;
+	text-decoration: none;
+}
+a:visited {
+	color: #0000FF;
+	text-decoration: none;
+}
+a:hover {
+	color: #999900;
+}
+
+
+
+
+
+/*
+************************************************* 
+LINK DEFINITIONS 
+************************************************* 
+*/
+
+/* 'editlinks' define the appearance of links that perform editing functions on all edit 
+ screens, including 'Edit Class', 'Edit Item', and 'Edit User'. */
+ 
+a.editlinks:hover {
+	
+	color: #660033;
+	text-decoration: underline;
+	font-size: small;
+	font-weight: normal;
+}
+a.editlinks:link {
+	
+	color: #993333;
+	text-decoration: underline;
+	font-size: small;
+	font-weight: normal;
+}
+a.editlinks:visited {
+	
+	color: #993333;
+	text-decoration: underline;
+	font-size:small;
+	font-weight: normal;
+}
+a.editlinks:hover {
+	
+	color: #660033;
+	text-decoration: underline;
+	font-size: small;
+	font-weight: normal;
+}
+
+/* 'itemTitle' defines how reserve item title links are listed. */
+
+a.itemTitle:link {
+	
+	color: #0000FF;
+	text-decoration: none;
+	font-size: medium;
+	font-weight: bold;
+}
+a.itemTitle:visited {
+	
+	color: #0000FF;
+	text-decoration: none;
+	font-size: medium;
+	font-weight: bold;
+}
+a.itemTitle:hover {
+	
+	color: #999900;
+	text-decoration: underline;
+	font-size: medium;
+	font-weight: bold;
+}
+
+/* 'subnav' defines the appearance and links that appear
+in the subnavigation bar just below the main navigation tabs. */
+.navItems a:link {
+	
+	color: #333333;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: normal;
+}
+a.subnav:visited {
+	
+	color: #333333;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: normal;
+}
+a.subnav:hover {
+	
+	color: #666666;
+	text-decoration: underline;
+	font-size: 12px;
+	font-weight: normal;
+}
+a.subnav:active {
+	
+	color: #CC0000;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/* titlelink defines certain links that are used as titles as headings to paragraphs or section */
+a.titlelink:link {
+	color: #0000FF;
+	font-weight: bold;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+a.titlelink:visited {
+	color: #0000FF;
+	font-weight: bold;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+a.titlelink:hover {
+	
+	text-decoration: underline;
+	font-weight: bold;
+	color: #999900;
+	}
+
+/*
+************************************************* 
+POSTITIONAL LAYOUT STYLES and PAGE REGION DEFINITIONS 
+
+NOTE: Changing certain properties of these styles 
+(such as margin, float, width, height, and padding) can significantly alter the
+appearance of the ReservesDirect interface.
+************************************************* 
+*/
+
+#container { /* a wrapper for the entire page layout */
+	/*height: 100%;*/
+}
+
+#Header { /* a wrapper containing the branding image divs */
+	margin: 0px;
+	padding: 0px;
+	height: 100px;
+}
+
+/* 'brand' classes are for branding logos. UpperLeft would
+generally be for the institution logo, UpperRight for the
+program logo (default is 'ReservesDirect' logo). */
+
+#Header .brandUpperLeft {
+	margin: 0px;
+	float: left;
+	padding: 0px;
+	height: 70px;
+	width: 40%;
+	background-image: url('../images/logo-el-blue.jpg');
+	background-repeat: no-repeat;
+	background-position: 10px 0 left top;
+}
+#Header .brandUpperRight {
+	margin: 0px;
+	display: block;
+	text-align: right;
+	vertical-align: top;
+	float: right;
+	clear: none;
+	height: 100px;
+	width: 50%;
+	background-image: url('../images/logo-rd-gold-book.jpg');
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+#Navigation { /* a wrapper containing 'resourceLinks', 'functionLinks', 'mainNav' and 'subNav' */
+	margin: 0px;
+	padding: 0px;
+}
+
+.functionLinks { /* 'functionlinks' describe the links to site-wide functions like help, sign off, and edit profile
+that appear on every screen.   */
+	padding: 5px 10px 3px 0px;
+	text-align: right;
+	font-size: x-small;
+	font-weight: normal;
+	color: #993333;
+}
+.functionLinks a:link {
+	color: #993333;
+}
+.functionlinks a:hover {
+	color: #993333;
+	text-decoration: underline;
+}
+.functionLinks a:visited {
+	color: #993333;
+}
+.resourceLinks { /* can be used for links to other library sites or resources 
+such as eJournals or Blackboard. Empty in the default implementation of RD 2.x. */
+	font-weight: bold;
+	color: #666666;
+	float: left;
+	margin-left: 10px;
+}
+/* mainNav defines the navigational tabs.
+Tabs are created using the 'Sliding Doors' CSS tabs technique
+by Douglas Bowman at http://www.alistapart.com/articles/slidingdoors/
+This technique can be used to create many different types of tabs;
+the commented guidelines below are for creating standard tabs. */
+#mainNav {
+	float:left;
+    width:100%;
+    height: 36px;
+    background:#7C89CA url('../images/navtab-default-bg.gif') 
+      repeat-x bottom; /* creates the background behind the tabs--should be only 2-3 pixels wide.
+	  						background color should be same as top color of bg image. */
+	font:x-small/1.5em Arial, Helvetica, sans-serif;
+	font-size:x-small;
+    } 
+	
+#mainNav ul {
+    margin:0;
+    padding:0;
+	padding:12px 10px 0; /* padding to top|right and left|bottom of ul, creates space around whole nav bar */
+    list-style:none;
+    }
+#mainNav li {
+    float:left;
+	background:url('../images/navtab-default-left-up.gif')
+      no-repeat left top; /* left-hand tab image for inactive tabs */
+    margin:0;
+    padding:0 0 0 10px; /* top|right|bottom|left padding. left padding=px width of left image */
+    }
+#mainNav a {
+	float:left;
+	display:block;
+	background:url('../images/navtab-default-right-up.gif')
+      no-repeat right top;  /* right-hand tab image for inactive tabs */
+	padding:5px 15px 4px 5px; /* left padding=right padding - pixel width of left image
+								bottom padding=desired overall bottom padding-pixel 
+								width of bottom border, if any */
+	font-weight: bold;
+	font-size:12px;
+	color: #FFFFFF;
+	text-decoration: none;
+    }
+	/* Commented Backslash Hack
+     hides rule from IE5-Mac \*/
+  #mainNav a {float:none;}
+  /* End IE5-Mac hack */ 
+#mainNav a:hover {
+      color:#FFFF66;
+	  }	
+#mainNav #current {
+	background-image:url('../images/navtab-default-left-down.gif'); /* left-hand tab image for active tabs */
+    }
+#mainNav #current a {
+	background-image:url('../images/navtab-default-right-down.gif'); /* right-hand tab image for active tabs */
+	padding-bottom:5px; /* bottom padding=top padding of mainNav a */
+	color: #333399;
+    }
+#subNav { /* a wrapper for 'navItems' and 'user'. */
+	margin: 0px 10px;
+	height: 20px;
+	vertical-align: bottom;
+	display: block;
+}
+.navItems { /* empty in default implementation of RD 2.x */
+	font-size: small;
+	font-weight: bold;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-left: 10px;
+	float: left;
+}
+.navItems ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+    list-style:none;
+}
+.navItems li {
+    float: left;
+    padding-left:10px;
+    padding-right: 10px;
+    border-right:1px solid #CCCCCC;
+}
+
+.navItems a {
+	color: #373643;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: normal;
+}
+.navItems a:hover {
+	text-decoration:underline;
+}
+.user {
+	font-size: small;
+	font-weight: bold;
+	color: #333333;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	float: right;
+}
+#divider { /* seperates navigation from content area */
+	background-image: url('../images/div-bg-yellow.gif');
+	background-repeat: repeat;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #000066;
+	border-bottom-color: #000066;
+	height: 10px;
+	margin: 0px;
+	padding: 0px;
+	clear: both;
+}
+#Location { /* a wrapper for 'locationIndicatorText' and 'currentClass' */
+	margin: 0px;
+	padding: 3px 0px 8px;
+	height: 16px;
+}
+.locationIndicatorText {
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: lowercase;
+	color: #333333;
+	text-decoration: none;
+	float: left;
+	padding-left: 10px;
+}
+.currentClass {
+	font-weight: bold;
+	color: #333399;
+	padding-right:10px;
+	float: right;
+}
+.clear {
+	clear: both;
+	padding: 0;
+	margin: 0;
+	height: 0;
+	width: 0;
+	display: block;
+	line-height:0;
+	font-size:0;
+}
+#noJavaAlert {
+	margin:0px 50px;
+	text-align:center;
+	padding:3px;
+}
+#alertMsg {
+	margin:0px 50px;
+	text-align:center;
+	padding:3px;
+}
+#content { /* wraps the content display area */
+	margin: 0px 50px;
+	min-height:200px;
+	clear: both;	
+}
+/* IE hack to get the width right \*/
+* html #content {
+	width: 100%; 
+}
+/* end IE hack */
+
+/* courseInfo describes the block where course title, instructors, etc. (all courseHeaders elements) appears
+in the class view. courseActions is a block containing links that provide actions for the course in the edit
+class screen, and is next to the courseInfo block. */
+#courseInfo {
+	float:left;
+	width:65%;
+}
+#courseActions {
+	float:right;
+	width:30%;
+	border-right:2px solid #333333;
+	border-bottom:2px solid #333333;
+	background-color:#7A879F;
+	color:#FFFFFF;
+	padding:4px 4px 4px 6px;
+	margin-top:7px;
+}
+#courseActions a {
+	color:#FFFFFF;
+	text-decoration:none;
+	padding-bottom:5px;
+}
+#courseActions a:hover {
+	text-decoration:underline;
+}
+#courseActions ul {
+	margin-left:0px;
+}
+#courseActions li {
+	list-style-image:url(../../images/list-arrow-white.gif);
+	margin-left:0px;
+}
+
+/*contentTabs and displayList together control how most tables and lists display in the main content area */
+.contentTabs {
+    margin-left:0px;
+    background-color:#FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:small;
+    } 
+	
+.contentTabs ul {
+	margin-left:0px;
+	padding:0px; 
+    list-style:none;
+    }
+.contentTabs li {
+    float:left;
+    margin:3px 3px 0 3px;
+    padding:0; 
+    border-right: 1px solid #666666;
+	border-left: 1px solid #666666;
+	border-top: 1px solid #666666;
+	}
+.contentTabs .alert {
+	font-size:12px;
+	color:#009900;
+}
+.contentTabs a {
+	float:left;
+	display:block;
+	background-color: #CCCCCC;
+	padding:4px 20px 4px 20px; /* left padding=right padding - pixel width of left image
+								bottom padding=desired overall bottom padding-pixel 
+								width of bottom border, if any */
+	color: #333333;
+	text-decoration: none;
+	font-weight: bold;
+    }
+	/* Commented Backslash Hack
+     hides rule from IE5-Mac \*/
+  .contentTabs a {float:none;}
+  /* End IE5-Mac hack */ 
+.contentTabs a:hover {
+     color: #000066;
+	text-decoration: underline;
+	background-color: #CCCC99;
+	  }	
+.contentTabs .current a, .contentTabs .current a:hover {
+	border-bottom: 1px solid #CCCCCC;
+	background-color: #333333;
+	color: #FFFFFF;
+	font-weight:bold;
+	text-decoration: none;
+	padding-bottom:4px; /* bottom padding=top padding of mainNav a */
+    }
+table.simpleList {
+	border:1px solid #CCCCCC;
+	background-color:#CCCCCC;
+}
+table.simpleList td {
+	padding:4px;
+	margin:1px;
+	background-color:#FFFFFF;
+}
+.simpleList .labelCell1 {
+	background-color:#8195B8;
+	text-align:right;
+}
+.simpleList .contentCell1 {
+	background-color:#CCCCFF;
+}
+.simpleList .emptyCell {      /* The background color of simpleList.emptyCell should be the same as .displayArea */
+	background-color:#CCCCCC;
+}
+table.displayList {	
+	border:1px solid #333333;
+	border-collapse:collapse;
+}
+table.displaylist td{
+	padding:4px;
+}
+.displayArea {	
+	border:1px solid #333333;
+	background-color:#CCCCCC;
+}
+.displayList .actions, .displayList .actions a {
+	color:#CCCCCC;
+	text-decoration:none;
+}
+.displayList .actions a:hover {
+	color:#CCCCCC;
+	text-decoration:underline;
+}
+.displayList .head, .displayList .foot{
+	background-color:#333333;
+	color:#FFFFFF;
+}
+
+.displayList .divider {
+
+	background-color: #CCCCFF;
+	color:#333333;
+	text-align: left;
+	border-top: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	
+}
+
+/* oddRow/evenRow define how alternating row colors appear in tables */
+.oddRow {
+    padding-top:1px; /* this fixes a display error in IE for the default implementation. Change at your own risk. */
+	background-color: #CCCCCC;
+	border-left:1px solid #333333; 
+	border-right:1px solid #333333;
+}
+.evenRow {
+    padding-top:1px; /* this fixes a display error in IE for the default implementation. Change at your own risk. */
+	background-color: #FFFFFF;
+	border-left:1px solid #333333; 
+	border-right:1px solid #333333;
+}
+.headingCell1 {
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #333333;
+	text-align: center;
+	padding:5px;
+	
+}
+.headingCell2 {
+
+	background-color: #CCCCFF;
+	text-align: left;
+	padding: 0;
+	border: 1px solid #333333;
+	font-weight:bold;
+	color:#333333;
+	
+}
+.headingCell2 .headingText{
+	font-size: large;
+	font-weight: bold;
+	color: #333333;
+	padding: 3px 0 5px 5px;
+
+	
+}
+.classEnrollmentOptions {
+	background-color:#FFFFCC;
+	padding:10px;
+	border-bottom:1px solid #333333;
+}
+.classRoll {
+	background-color:#CCCCCC;
+	padding:10px;
+}
+.classRollPending {
+	float:left;
+	width:45%;
+}
+.classRollActive {
+	float:left;
+	width:25%;
+}
+
+.reserveItem {
+	margin:0px; 
+	padding:0px; 
+	border-left:1px solid #999999; 
+	border-right:1px solid #999999;
+}
+.editOptions { /* the editing box thate appears next to reserve items on the edit class screen */
+	float:right; 
+	margin:0 0 0 5px; 
+	width:245px; 
+	padding:3 0 0 0; 
+	height:25px; 
+	vertical-align:middle;
+}
+.editOptionsTitles {
+	margin:0px;
+	padding-bottom:5px;
+}
+.editOptions .checkBox, .editOptionsTitles .checkBox,  .editOptions .editBox, .editOptionsTitles .editBox,.editOptions .sortBox, .editOptionsTitles .sortBox ,.editOptions .itemNumber, .editOptionsTitles .itemNumber,.editOptions .statusBox, .editOptionsTitles .statusBox {
+	float:right; 	
+	vertical-align:middle;
+	text-align:center;	
+	padding-left:5px;
+	font-size:9pt;
+	
+}
+.editOptions .checkBox, .editOptionsTitles .checkBox {
+	width:40px;
+}
+.editOptions .editBox, .editOptionsTitles .editBox {
+	width:30px;
+}
+.editOptions .sortBox, .editOptionsTitles .sortBox {
+	width:30px;
+}
+.editOptions .itemNumber, .editOptionsTitles .itemNumber {
+	width:30px;
+}
+.editOptions .statusBox, .editOptionsTitles .statusBox {
+	width:85px;
+}
+.iconBlock { /* wrapper for the item type icon appearing next to items */
+	float:left; 
+	width:29px; 
+	padding:3px 0 0 5px;
+}
+.metaBlock { /* wrapper for item metadata on the edit class screen */
+	margin-left:35px; 
+	margin-right:245px; 
+	margin-top:0px;
+	padding:3px 5px 5px 0;
+	border-right:1px solid #999999;
+}
+.metaBlock-wide { /* wrapper for item metadata on screens other than the edit class screen */
+	margin-left:35px; 
+	margin-right:60px; 
+	padding:3px 5px 5px 0;
+}
+.checkBox-right { /* wrapper for the checkboxes that appear on the student class view */
+	float:right; 
+	margin:0px; 
+	width:20px;
+	padding:3px; 
+	padding-left:10px; 
+	padding-right:10px;
+}
+.homenav {
+	
+	font-size: 12px;
+	font-weight: bold;
+	list-style-type: none
+}
+#footer { /* a wrapper for the footer content areas */
+	background-color: #fff;
+	display: block;
+	border-top: 1px solid #ddd;
+	padding: 10px 5px;
+	font-size: xx-small;
+	font-style: italic;
+}
+.footerContentLeft {
+	text-align: left;
+	vertical-align: top;
+	display: block;
+	left: 0;
+	width:200px;
+	float: left;
+}
+.footerContentCenter {
+	text-align: left;
+	vertical-align: top;
+	display: block;
+	margin-right:200px;
+	margin-left:200px;
+	float: none;
+	text-align:center;
+}
+.footerContentRight {
+	text-align: right;
+	vertical-align: top;
+	display: block;
+	width:250px;
+	float: right;
+	right: 0px;
+}
+
+
+/*
+************************************************* 
+FORMATTING DEFINITIONS 
+************************************************* 
+*/
+.indent {
+	margin-left:10px;
+	padding: 3px;
+}
+.nobullet {
+	list-style-type: none;
+}
+.borders {
+	border: 1px solid #666666;
+}
+.border-helpfile {
+	border: 1px solid #000066;
+}
+#printRequest { /* controls how physical item requests appear when printed,
+whether there should be page breaks or no page breaks. */
+	page-break-before:always;
+}
+
+
+
+/*
+ ************************************************* 
+ TEXT DISPLAY DEFINITIONS 
+ ************************************************* 
+*/
+
+/* The following provide definitions for they system message display area.
+The style for individual system messages is set in the "news" table of the db,
+or from the admin tab. */
+#displayMsg {
+	margin:0px 50px 0px 50px;
+	text-align:left;
+	
+}
+#displayMsg .emergency {
+	padding:5px;
+	border:1px solid #660000;
+	background-color:#FFCCCC;
+	color:#CC0000;
+}
+#displayMsg .notice {
+	padding:5px;
+	border:1px dashed #003300;
+	background-color:#CCFFCC;
+	color:#003300;
+}
+
+
+/* The following group of tags define how reserve items are listed, along with a.itemTitle 
+(see "Link Definitions" above).
+'itemTitle' defines the appearance of item titles for materials that do not have live links 
+(like physical items) and for reserve item lists that do not show items as hot links (like the sort screen)
+itemMetaPre defines how some prefixes to metadata information appear, for example 'from' x journal or book.*/
+
+.itemTitleNoLink {
+	font-size: medium;
+	font-weight: bold;
+	color: #000000;
+
+}
+.itemAuthor {
+	font-size: x-small;
+	font-style: normal;
+	text-transform: uppercase;
+
+}
+.itemMeta {
+	font-size: x-small;
+	font-style: normal;
+	color: #000000;
+
+}
+.itemMetaPre {
+	font-size: x-small;
+	font-style: italic;
+
+} 
+.noteType {
+	font-size: small;
+	font-weight: bold;
+	color: #660000;
+
+}
+.noteText {
+	font-size: small;
+	font-weight: bold;
+	color: #000000;
+}
+
+/* Other text definition tags below.... */
+.button, .button:focus {
+    color: #fff;
+    background-color: #339;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #000;
+    border-left: 1px solid #C4C4B8;
+    border-top: 1px solid #C4C4B8;
+    -moz-border-radius: 5px;
+}
+.button:hover {
+    background-color: #66a;
+}
+
+.small {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.small-x {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-small;
+}
+.helperText {  
+		 
+		font-size: small; 
+		font-weight: bold; 
+		color: #000099
+}
+
+.noticeBox {
+        background-color: #FFFF99;
+        border-bottom: 1px solid #000000;
+        border-right: 1px solid #000000;
+        border-left: 1px solid #000000;
+        border-top: 1px solid #000000;
+        margin-top:10px;
+        padding:10px;
+        clear: both;
+        height: 58px;
+}
+.noticeText {
+		font-size: small;
+		font-weight: bold;
+		color: #000000;        
+}
+.noticeImg {
+	background-image: url('../images/copyrightwarningsign.png');
+    background-position: 10px 0 left top;
+	background-repeat: no-repeat;
+	height: 58px;
+    width: 58px;
+    float: left;
+    margin-right: 5px;
+}
+
+.courseTitle {
+	font-size: large;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: #000066;
+}
+.courseHeaders {
+
+	padding: 3px 0 3px 0;
+}
+.courseHeaders .label {
+	font-weight: bold;
+	color: #660000;
+}
+.strong {
+	font-weight: bold;
+	color: #000000;
+}
+.successText {
+	font-weight: bold;
+	color: #009900;
+}
+.failedText {
+	font-weight: bold;
+	color: #CC0000;
+}
+.itemNumber {
+	
+	font-size: small;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: #999999;
+}
+.hiddenItem a.itemTitle:link, .hiddenItem .itemTitleNoLink, .hiddenItem .itemMetaPre, .hiddenItem .itemMeta, .hiddenItem .itemAuthor, .hiddenItem .noteType, .hiddenItem .noteText {    
+		color: #999999;
+}
+/*hiddenItem defines the appearance of reserve materials 
+that students have chosen to hide from view. */
+.instructionText {
+	display: block;
+	text-align: left;
+	float: none;
+	padding: 10px;
+	width: 650px;
+	margin: auto;
+	border: 1px solid black;
+
+/*instructionText is used for any text that gives instructions to users on steps or actions to take.*/
+
+}
+
+/* statusText styles are used on the "Edit Class" page for text that indicates the current status
+of materials on reserve. */
+.heading {
+	font-weight: bold;
+	color: #000066;
+
+}
+
+.inProcess {
+	color: #666666;
+	font-weight: bold;
+
+}
+.copyrightReview_hidden {
+	color: #666666;
+	font-weight: bold;
+}
+.copyrightReview_active {
+	color: #009900;
+	font-weight: bold;
+}
+.copyrightReview_denied {
+	color: #CC0000;
+	font-weight: bold;
+}
+.active {
+	color: #009900;
+	font-weight: bold;
+
+}
+
+.inactive {
+	color: #CC0000;
+	font-weight: bold;
+
+}
+.openEnrollment {
+	color:#009900;
+	font-weight:bold;
+}
+.moderatedEnrollment {
+	color:#663300;
+	font-weight:bold;
+}
+.closedEnrollment {
+	color:#CC0000;
+	font-weight:bold;
+}
+#copyright .new {
+	background-color:#CADBEC;
+	color:##0B105D;
+	font-weight:bold;
+}
+#copyright .pending {
+	background-color:#FFFFCC;
+	color:#663300;
+	font-weight:bold;
+}
+#copyright .approved {
+	background-color:#CCECDE;
+	color:#003300;
+	font-weight:bold;
+}
+#copyright .denied {
+	background-color:#D2AAA0;
+	color:660000;
+	font-weight:bold;
+}
+
+/*Auto complete Definitions for AJAX class search/lookup screens*/
+
+#keyword {
+margin: 0 25px 0 0;
+padding:0px;
+width: 300px;
+display: block;
+border:1px solid #99b58d;
+}
+
+
+.LSResult {
+      position: absolute;
+      
+      width: 350px;
+      margin: 1px 0px 2px 0px;
+      padding: 0px;
+      clear:  left;
+      z-index:  100;
+      border:1px solid #666666;
+      color: #783E3F;
+      background-color: #EDD2C9;
+      
+      height:150px;
+      overflow:auto;
+}
+.LSResult ul {
+	list-style-position:inside; 
+     margin-bottom: -5px;
+     margin-top: 0px;
+     padding-top: 0px;
+     margin: 0;
+     padding: 0px;
+}
+.LSResult li {
+    padding: 2px 10px;
+    line-height:normal;
+    margin-bottom: 0px;
+    font-size:12px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+}
+/*
+.LSResult ul li {
+    text-indent: -20px;
+    padding: 0px 15px 0 20px;
+    margin-top:0;
+    line-height:1em;
+    list-style-type: none;
+}
+.LSShadow ul {
+      position: relative;
+      right: 1px;
+      margin: 0px;
+      padding: 0px;
+      background-color: #FFFFFF; /*shadow color*/
+      color: inherit;
+}
+*/
+.LSRes {
+      position: relative;
+      bottom: 1px;
+      right: 1px;
+      background-color: white;
+      border:  1px solid #AAA;
+}
+#LSHighlight {
+
+     color: #783E3F;
+     background-color: #DEC4B9;
+}
+.LSRow li {	
+	color:green;
+	cursor:default;
+	font-size:12px;
+	font-weight:normal;
+}
+
+/*
+****************************************
+Note Form Definitions
+****************************************
+*/
+
+.noteform_container {
+	position: relative; /* must be relative to align the child correctly */
+	z-index: 2;
+}
+
+/* this will show an opaque background behind the form; must be positioned in the same location as the form */
+.noteform_bg {
+	position: absolute; /* absolutely-positioned within the relatively-positioned parent */
+	width: 425px;
+	height: 230px;
+	
+	z-index: 3;
+	top: -220px; /* negative (height + any padding) */
+	
+	background: lightblue;
+	border: 1px solid black;
+	
+	/* transparency */
+	opacity: 0.75; /* css3 standard */
+	filter: alpha(opacity=75); /* IE */
+	-moz-opacity: 0.75; /* mozilla */
+}
+
+/* the form block */
+.noteform {
+	position: absolute; /* absolutely-positioned within the relatively-positioned parent */
+	width: 370px;
+	height: 170px;
+	text-align: left;
+	padding: 5px;
+	z-index: 4;
+	top: -190px; /* negative (height + any padding) */
+	left: 20px;
+}
+
+.noteform textarea {
+	width: 370px;
+	height: 90px;
+	overflow: auto;
+}
+
+/*
+****************************************
+Copyright Contact Form Definitions
+****************************************
+*/
+
+.contactform_container {
+	position: relative; /* must be relative to align the child correctly */
+	z-index: 2;
+}
+
+/* this will show an opaque background behind the form; must be positioned in the same location as the form */
+.contactform_bg {
+	position: absolute; /* absolutely-positioned within the relatively-positioned parent */
+	width: 410px;
+	height: 255px;
+	
+	z-index: 3;
+	top: -245px; /* negative (height + any padding) */
+		
+	background: lightblue;
+	border: 1px solid black;
+	
+	/* transparency */
+	opacity: 0.80; /* css3 standard */
+	filter: alpha(opacity=80); /* IE */
+	-moz-opacity: 0.80; /* mozilla */
+}
+
+/* the form block */
+.contactform {
+	position: absolute; /* absolutely-positioned within the relatively-positioned parent */
+	width: 400px;
+	height: 245px;
+	text-align: left;
+	padding: 5px;
+	z-index: 4;
+	top: -245px; /* negative (height + any padding) */
+}
+
+/* table */
+.contactform th {
+	border: 1px solid black;
+	text-align: center;
+}
+
+
+/*
+**************************************
+Fieldsets
+
+NOTE: IE6 (maybe others) is dumb and ignores fieldset/legend css in this file.
+	Just as well, since it does not apply fieldset background css correctly
+**************************************
+*/
+
+fieldset {
+	border: 1px solid #666666;
+	background: #BBBBBB;
+	margin: 5px;
+}
+
+legend {
+	border: 1px solid #666666;
+	background: #DDDDDD;
+	font-weight: bold;
+	padding: 2px;
+}
+
+fieldset.highlight {
+	background: #DDDDDD;
+}
+
+
+/*
+******************************************
+Help
+******************************************
+*/
+
+/* definitions for the sidebar positioning, etc */
+#help-container {
+	position: fixed;
+	top: 10px;
+	bottom: 10px;
+	right: 0;
+	width: 250px;
+	background-color:#eee;
+	padding: 5px;
+	box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+	border: 1px solid #333;
+	border-right: 0;
+	overflow: hidden;
+	z-index:9999;
+}
+* html #help-container { /* IE hacks */
+	position: absolute;
+	top: 2%;
+	height: 95%;	
+}
+#help-container iframe {
+	border: 0px;
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+}
+
+/* classes for the #container div */
+.helpOff {
+	margin: 0px;
+	width: 100%;
+}
+.helpOn {
+	border-right: 1px solid black;
+	margin: 0px 250px 0px 0px;
+}
+
+/* end container/positional css */
+
+#help-container #nav {
+	text-align: right;
+	padding-bottom: 2px;
+	border-bottom: 1px solid black;
+	margin-bottom: 5px;
+}
+
+#help_article_perms {
+	margin-left: 20px;
+}
+
+#help label, #help-sidebar label {
+	width: 50px;
+	font-style: italic;
+}
+
+#help textarea {
+	width: 400px;
+	height: 150px;
+}
+#help-sidebar textarea {
+	width: 200px;
+	height: 100px;
+}
+
+
+#help {} /* div that wraps all of content of help viewed in the main page */
+#help-sidebar {} /* div that wraps all of content of help viewed in the sidebar */
+
+.help_article_title {
+	color:#663333;
+	font-size:16px;
+	font-weight:bold;
+	font-variant: caps;
+}
+a.help_edit_link {
+	color: #993333;
+	text-decoration: underline;
+	font-weight: normal;
+}
+a.help_edit_link:hover {
+	color: #660000;
+	text-decoration: underline;
+}
+.help_article_body {
+	color:#333333;
+}
+.help_article_list {
+	margin-top:0px;
+	list-style:circle;
+}
+
+.help_related_tags {
+	border:1px solid #333333;
+	padding:5px;
+	background-color:#CCCCCC;
+} /* contains .help_tag_list */
+.help_tag_list {
+	background-color:FFFFCC;
+	padding:2px;
+}
+a.help_tag {
+	color:#6065A1;
+}
+a.help_tag:hover {
+	color:#374597;
+	text-decoration:underline;
+}
+a.help_user_tag {
+	color:
+}
+a.help_user_tag:hover {
+	color:#374597;
+	text-decoration:underline;
+}
+
+.help_keyword_highlight {
+	background-color:#FFFF00;
+}
+.help_error {}
+
+/**
+ * ************************************
+ * Tags for the new Request Queue.
+ * ************************************
+ */
+
+.selectLibrary button{
+	float:right;
+}
+
+.changeAll{
+	float:right;
+}
+
+table.queue{
+	width:100%;
+	border-collapse:collapse;
+	border-spacing:0;
+
+}
+
+tr.category, tr.category th {
+	background-color:#000000;
+	color:#FFFFFF;
+	font-size:small;
+	border-left:1px solid #000;
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	
+}
+
+tr.category th input{
+	float:left;
+
+}
+
+tr.category th{
+	padding: .3em;
+	text-align: center;
+}
+
+tr.category a:link{
+	color: #FFFFFF;
+	text-decoration: underline;
+	font-size: small;
+	font-weight: normal;
+}
+
+tr.category a:hover {
+	
+	color: #C0C0C0;
+	text-decoration: underline;
+	font-size: small;
+	font-weight: bold;
+}
+
+tr.category a:visited {
+	color: #FFFFFF;
+	text-decoration: underline;
+	font-size: small;
+	font-weight: normal;
+}
+
+@media print
+{
+.queue, .queue > * {display: block;}
+.category {display:block;}
+.category th,.category td, .queueData td , .temp td{display:inline-block;}
+.category th.rid {display:none;}
+.queueData{
+	/*page-break-before:always;*/
+	display:block;
+}
+.queueData th {display:none;}
+
+
+.queueData + .temp{
+	page-break-after:always;
+	display:block;
+}
+}
+
+.queueData td{
+	border-width: 0 0 1 0;
+	border-style: solid;
+	border-color: #DDD;
+	padding:.5em;
+	text-align:center;
+	background-color:#EEE;
+	font-size:small;
+}
+
+.queueData th{
+	padding: .25em;
+	float: left;
+}
+
+
+.queueMetadata{
+	background-color:#FFF;
+	font-size:small;
+	padding-right: 24.5em;
+}
+
+.queueMetadata > div{
+	padding: .2em;
+}
+
+.queueActions{
+	background-color: #DDD;
+	width: 23em;
+	float: right; 
+	font-size:small;
+	padding: 0.5em;
+}
+
+.queueActions > div{
+	text-align:right;
+}
+
+.queueActionsSelect{
+	float:right;
+	clear:both;
+	width:100%;
+	text-align:right;
+	margin-bottom: 0.5em;
+}
+
+.queueActionsSelect select{
+	width:15em;
+}
+
+.processButtons{
+	float:right;
+	clear:both;
+	width:100%;
+	text-align:right;
+	margin-bottom:0.5em;
+}
+
+.denyButtons{
+	float:right;
+	clear:both;
+	width:100%;
+	text-align:right;
+}
+
+.queueItem{
+	background-color:#FFF;
+	padding:0;
+	border-left:1px solid #DDD;
+	border-top: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+	border-bottom: 1px solid #000;
+
+}
+
+td.dataLeft{
+	border-left-width: 1;	
+}
+
+td.dataRight{
+	border-right-width: 1;
+}
+
+
+
+.queueMetadataKey{
+	font-weight: bold;
+	text-align: right;
+	width: 10em;
+}
+
+div.queueMetadata .details {
+	display: none;
+}
+
+div.queueMetadataBlock {
+	padding-left: 7em;
+}
+
+div.detailsButton{
+	/* vertical-align:top; */
+	font-size:x-small;
+	color: #00F;
+	background-color:#FFF;
+	width: 6.5em;
+	/* display:inline-block; */
+	float:left;
+	cursor: pointer;
+	padding: 0;
+	margin: 0.2em;
+}
+
+.detailsButton *{
+	vertical-align:top;	
+}
+
+.queueActions input{
+	width: 49%;
+	color: #000000;
+	display: inline;
+	text-align: center;
+	cursor: pointer;
+}
+
+.processButton {
+	background: #CEE3F6;
+	border-color: #E0ECF8 #A9D0F5 #A9D0F5 #E0ECF8;
+}
+
+.deleteButton {
+	background: #BDBDBD;
+	border-color: #D8D8D8 #A4A4A4 #A4A4A4 #D8D8D8;
+}
+
+.denyButton {
+	background: #F5A9A9;
+	border-color: #F6CECE #F78181 #F78181 #F6CECE;
+}
+
+div.queueMetadata .details div.note {
+	font-size: small;
+	text-align: left;
+}
+
+div.queueMetadata td{
+	vertical-align: top;
+}
+
+td.queueMetadataValue {
+	padding-left: .2em;
+}
+
+td.queueMetadataValue span.noteText {
+	font-weight: normal;
+}
+
+.queue a.sort-asc, .queue span.sort-asc{
+	padding-right: 25px;
+	text-align:center;
+	background-image:url(../images/asc_sort.gif);
+	background-position:center right;
+	background-repeat:no-repeat;
+}
+.queue a.sort-desc, .queue span.sort-desc{
+	
+	text-align:center;
+	padding-right: 25px;
+	background-image:url(../images/desc_sort.gif);
+	background-position:center right;
+	background-repeat:no-repeat;
+}
+
+
+.disabledItemType{
+	font-style:italic;
+	color:#CCCCCC;
+}
+
+.disabledLabel{
+	font-style:italic;
+	color:black;
+}
+
+/*
+*************************************************
+ for status tab in edit item */
+************************************************* 
+*/
+
+.ilsInfo{border: 1px solid #903;padding:5px;}
+.ilsInfo ul, .ilsInfo li {font-size:small;}
+.ilsInfo p, .ilsInfo p + ul {margin-top:0;}
+.ilsInfo p+p {margin-top:1em;}
+.noMarginBottom{margin-bottom:0;}
+
+/*
+*************************************************
+ New Normalized Styles
+************************************************* 
+*/
+
+.iconText * {vertical-align: middle;}
+
+.clear{
+	clear: both;
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+}
+
+.hidden{
+	display: none;
+}
+
+#newStyles {
+	font-size: 14px;
+}
+
+#newStyles p, #newStyles div, #newStyles ul, #newStyles ol, 
+#newStyles li, #newStyles form, #newStyles label, 
+#newStyles table, #newStyles tr, #newStyles td, #newStyles th {
+	font-size: 1.0em;
+}
+
+#newStyles p, #newStyles li {
+	margin-top: 0.5em; margin-bottom: 0.5em; line-height:1.2em;
+}
+
+#newStyles h1, #newStyles h2, #newStyles h3, #newStyles h4, #newStyles h5 {
+	margin-top: 14px;
+	margin-bottom: 14px;	
+}
+
+#newStyles h1 {
+	font-size: 2.0em;
+}
+
+#newStyles h2 {
+	font-size: 1.7em;
+}
+
+#newStyles h3 {
+	font-size: 1.5em;
+}
+
+#newStyles h4 {
+	font-size: 1.2em;
+}
+
+#newStyles h5 {
+	font-size: 1.0em;
+}
+
+.blockLabel, .blockLink {display:block;}
+
+.blockLabel .block_1, .block_1 {
+	display: inline-block;
+	width: 60px;
+}
+.blockLabel .block_2, .block_2 {
+	display: inline-block;
+	width: 120px;
+}
+.blockLabel .block_3, .block_3 {
+	display: inline-block;
+	width: 180px;
+}
+
+.marginCenter {
+	margin-right:auto;
+	margin-left:auto;
+}
+
+.shadowed{}
+.shadowed_near{
+	-webkit-box-shadow: 0 0 10px #888;
+	-moz-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888;
+    background: #eee;	
+}
+.shadowed_far{}
+
+.bordered {border: 1px solid #555;}
+
+.appOptions{
+	background-color: #fff;
+	padding-bottom:0.5em;
+}
+
+.appOptions h3 {
+	background-color: #555;
+	color:#fff;
+	padding: 0.25em;
+	padding-left:1em;
+}
+.formHeader {
+	background-color: #555;
+	color:#fff;
+	text-align:center;
+	margin:0;
+	border:none !important;
+	padding: 0.25em;
+}
+.formSubHeader {
+	background-color: #555;
+	color:#fff;
+	text-align:center;
+	margin:0;
+	border:none !important;'
+}
+
+.formHeader a {color:#eef;text-decoration:underline;}
+
+.appOptions ul {
+	list-style:disc inside;
+	margin-left:0.5em;
+	font-size: 12px;
+	padding: 0.25em;
+}
+
+.appOptions li {
+	margin-left:0;
+}
+
+.appOptions p {
+	margin:0.75em;
+}
+
+.basicPadding {
+	padding:15px;
+}
+
+.noBottomMargin { margin-bottom:0 !important;}
+.noTopMargin { margin-top:0 !important;}
+
+.bottomMargin {
+	margin-bottom:1em;
+}
+
+.bottomHalfMargin {
+	margin-bottom:0.5em;
+}
+
+.topHalfMargin {
+	margin-top:0.5em;
+}
+
+.topMargin {
+	margin-top:1em;
+}
+
+ul.discList {
+	list-style:disc inside;
+	margin-left:0.5em;
+}
+
+.policyNotice {
+	border: 1px solid #393;
+	background-color:#afa;
+	padding:15px;
+	margin-bottom: 1em;
+	font-size: 0.75em;
+}
+
+#displayMsg {
+	text-align:center;	
+}
+
+#displayMsg .emergency, .newsEmergency {
+	padding:5px;
+	border:1px solid #c00;
+	background-color:#fcc;
+	color:#CC0000;
+}
+
+#displayMsg .notice, .newsNotice {
+	padding:5px;
+	border:1px solid #cc0;
+	background-color: #ffc;
+	color:#333300;
+}
+
+.warning {
+	padding:5px;
+	margin: 10px 20px;
+	border:1px dashed #c00;
+	background-color: #eeeeee;
+	color:#003300;
+}
+
+.appOptions .padding {
+	padding:0.5em;
+}
+
+.policyNotice h2 {
+	border-bottom: 1px solid #393;
+	margin-bottom:0.5em;
+}
+
+.policyNotice h4 {
+	font-size:14px;
+	border-bottom:1px solid #393;
+	margin-bottom:0.5em;
+}
+
+.policyNotice p {
+	margin-bottom: 0.5em;
+}
+
+.noUnderline, 
+.noUnderline a,
+.noUnderline a:link, 
+.noUnderline a:visited, 
+.noUnderline > *, 
+.noUnderline *{border:0;text-decoration:none;}
+
+.alignRight {text-align:right;}
+
+/*
+*************************************************
+ jQuery UI Styles
+************************************************* 
+*/
+
+.activeDragTarget {
+	-webkit-box-shadow: 0 0 10px #888;
+	-moz-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888;
+    background: #eee;
+	
+}
+
+/*
+ * New styles for 2.0 default skin
+ */
+
+body {background-color:#eee;}
+
+.clearing {clear:both;}
+
+#outer-head-container {width:960px;margin-left:auto;margin-right:auto;background-color:#999;}
+#institution_title {padding:15px;}
+
+#main-container, #container {background-color:#fff;}
+#container {width:960px;margin-left:auto;margin-right:auto;}
+#main-container .padding, #container .padding{padding: 10px;}
+#main-container .loginTitle {margin-top:1em;margin-bottom:1em;}
+#main-container h3 {margin-bottom:0.5em;}
+#main-container p {margin-bottom:1em;}
+
+.cancelNavigation {font-weight:bold;text-align:right;}

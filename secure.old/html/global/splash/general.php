@@ -1,0 +1,4 @@
+<h3>About ReservesDirect</h3>
+<p>ReservesDirect is a free, open-source web application (PHP, MySQL) for managing electronic and physical library materials reserved for university courses.</p>
+<p>It originated at Emory University Libraries. This version is maintained and released by NCSU Libraries. You can obtain more information about <a href="https://code.google.com/p/reservesdirect-ncsu/">ReservesDirect at our project page on Google Code.</a></p>
+<p>The content on this sidebar is customizable. Edit 'splash/general.php' in the HTML folder for your selected theme (theme HTML is located in 'secure/html/<i>&lt;themefolder&gt;</i>'. If that file does not exist, you can find the fallback copy in 'global/splash/general.php'. We don't recommend editing the global theme files. Copy it into your theme and edit it.</p>

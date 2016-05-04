@@ -1,0 +1,17 @@
+<message>
+	<preview>multiple pass translate</preview>
+	<template>
+{{xmlDecl}}
+<jobPackage>
+   <submitParameterList>
+       <replace name='test1'>Test1Text</replace> 
+       <replace name='test2'>Test2Text</replace>
+   </submitParameterList>
+   <jobList>
+       <job>@{test1}</job>
+       <job>@{test2}</job>
+       <job>@{profile-dir}</job>
+   </jobList>
+</jobPackage>
+</template>
+</message>

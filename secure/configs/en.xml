@@ -1,0 +1,162 @@
+<dictionary>
+	<actions>
+		<activateClass>
+			<userLabel>Activate a Class</userLabel>		
+		</activateClass>
+		<addClass>
+			<userLabel>Add A Class</userLabel>	
+		</addClass>
+		<addReserve>
+			<userLabel>Request a Reserve Item</userLabel>
+		</addReserve>
+		<addUser>
+			<userLabel>Add a User</userLabel>
+		</addUser>
+		<admin>
+			<userLabel>Administrate This Application</userLabel>
+		</admin>
+		<addMultipleReserves>
+			<userLabel>Request Reserve Items</userLabel>
+		</addMultipleReserves>
+		<createClass>
+			<userLabel>Create a Class</userLabel>
+		</createClass>
+		<createNewClass>
+			<userLabel>Create a Class</userLabel>
+		</createNewClass>
+		<doSearch>
+			<userLabel>Search Reserves</userLabel>
+		</doSearch>
+		<editItem>
+			<userLabel>Edit a Reserve Item</userLabel>
+		</editItem>
+		<editUser>
+			<userLabel>Manage a User</userLabel>
+		</editUser>
+		<exportClass>
+			<userLabel>Export a Class</userLabel>
+		</exportClass>
+		<generateBB>
+			<userLabel>Export a Class</userLabel>
+		</generateBB>
+		<manageClasses>
+			<userLabel>Manage Classes</userLabel>
+		</manageClasses>
+		<manageUser>
+			<userLabel>Manage a User</userLabel>
+		</manageUser>
+		<myReserves>
+			<userLabel>View Reserves</userLabel>
+		</myReserves>
+		<reportsTab>
+			<userLabel>View Reports</userLabel>
+		</reportsTab>
+		<searchResults>
+			<userLabel>Search Reserves</userLabel>
+		</searchResults>
+		<searchScreen>
+			<userLabel>Search Reserves</userLabel>
+		</searchScreen>
+		<searchTab>
+			<userLabel>Search Reserves</userLabel>
+		</searchTab>
+		<viewCourseList>
+			<userLabel>View Courses</userLabel>
+		</viewCourseList>
+		<viewReport>
+			<userLabel>View Reports</userLabel>
+		</viewReport>
+		<viewReservesList>
+			<userLabel>View Reserves</userLabel>
+		</viewReservesList>
+	</actions>
+	<messages>
+		<noJsWarning>Your browser has javascript disabled, some features of ReservesDirect require javascript.</noJsWarning>
+	</messages>
+	<codes>
+		<loginFailure>
+			<invalidCredentials>
+				<code>001</code>
+				<message>Invalid username or password.</message>
+			</invalidCredentials>
+			<unableToContactService>
+				<code>002</code>
+				<message>Unable to contact the authentication service.</message>
+			</unableToContactService>
+			<invalidCredentialsLocal>
+				<code>003</code>
+				<message>Invalid username or password.</message>
+			</invalidCredentialsLocal>
+			<expiredCredentialsLocal>
+				<code>004</code>
+				<message>This account has expired.</message>
+			</expiredCredentialsLocal>
+			<notAuthorized>
+				<code>008</code>
+				<message>Your credentials were verified, but you do not have access to this application.</message>
+			</notAuthorized>
+			<willNotCreate>
+				<code>009</code>
+				<message>Your credentials were verified, but you do not have a local account this application and it is not configured to create accounts automatically.</message>
+			</willNotCreate>
+			<pluginError>
+				<code>010</code>
+				<message>This application's authentication component failed to load.</message>
+			</pluginError>
+			<createFailed>
+				<code>011</code>
+				<message>Your credentials were verified with the remote authentification system, but you do not have a local account this application, and automatic account creation failed.</message>
+			</createFailed>
+			<universeMelted>
+				<code>020</code>
+				<message>Unexpected error.</message>
+			</universeMelted>
+		</loginFailure>
+		<dbFailure>
+			<courseAliasIntegrityFailure>
+				<code>410</code>
+				<message>This course instance lacks a valid primary course alias.</message>
+			</courseAliasIntegrityFailure>
+		</dbFailure>
+		<ciscoMxeFailure>
+			<courseAliasIntegrityFailure>
+				<code>1304</code>
+				<message>Unable to make a secure connection to the MXE with no credentials provided in the configuration.</message>
+			</courseAliasIntegrityFailure>
+		</ciscoMxeFailure>
+	</codes>
+	<instructions>
+		<guestUserPolicyForStaff>
+			<h2>Managing Guest Access</h2>
+			<p>Guest access should only be granted to users that do not have 
+			institutional access. Please be sure to set an expiration date for 
+			guest users. When guest access is granted, the user will be sent 
+			an e-mail with a URL that will allow them to set their own 
+			password. This password will work for them until guest access 
+			expires. 
+			</p>
+			<p>Granting guest access will not prevent users with institutional 
+			access from logging in as normal, but it will allow these users
+			to login when their institutional access is revoked. It can also
+			lead to confusion as to how to log in, so avoid granting guess
+			access to instituional members when possible, and only for limited
+			amounts of time.</p>
+			<p>Issues with institutional access need to be resolved through
+			campus IT.</p>
+		</guestUserPolicyForStaff>
+		<newUserPolicyForStaff>
+			<h2>Creating Users</h2>
+			<p>User accounts should only be created for people not affiliated 
+			with the university (Not students, Not faculty), and for new Library
+			staff that will be working with this application as part of their
+			work. Accounts are created for students and faculty nightly based 
+			on enrollment.
+			</p>
+			<p>Creating an account does not automatically grant users access. 
+			Normal accounts must login using their institutional credentials. 
+			To grant a user without institutional credentials access you must 
+			also <b>grant guest access</b> while or after creating their 
+			account.</p>
+		</newUserPolicyForStaff>
+	</instructions>
+</dictionary>

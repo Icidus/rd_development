@@ -1,0 +1,7 @@
+<message>
+	<preview>reschedule a completed job</preview>
+	<template>
+{{xmlDecl}}
+<rescheduleJob id="{jobId}"></rescheduleJob>
+</template>
+</message>

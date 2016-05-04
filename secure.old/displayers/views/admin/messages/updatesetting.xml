@@ -1,0 +1,7 @@
+<message>
+	<preview>update job priority</preview>
+	<template>
+{{xmlDecl}}
+<!-- NOT DOCCUMENTED YET -->
+</template>
+</message>

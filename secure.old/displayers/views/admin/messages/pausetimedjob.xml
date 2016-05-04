@@ -1,0 +1,7 @@
+<message>
+	<preview>pause a timed job</preview>
+	<template>
+{{xmlDecl}}
+<pauseTimedJob id="{jobId}"></pauseTimedJob>
+</template>
+</message>

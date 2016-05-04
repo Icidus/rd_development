@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+	<to>{{userEmail}}</to>
+	<from>{{supportEmail}}</from>
+	<subject>New Account Created</subject>
+	<body>Welcome to {{instanceName}} at {{institutionName}}. 
+	
+A new guest account has been created for you. {{instanceName}} allows you to access all of your course materials online. 
+
+Your username is: {{userUsername}} 
+
+To set your password and log in, please visit: 
+
+{{url}}
+
+For further assistance on how to use the system, click on the "Help" link, send an email to {{supportEmail}}, or contact the reserves staff at your home library.</body>
+</template>

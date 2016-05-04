@@ -1,0 +1,10 @@
+<message>
+	<preview>stop live capture</preview>
+	<template>
+{{xmlDecl}}
+<stop-capture>
+   <host>localhost</host>
+   <port>5008</port>
+</stop-capture>
+</template>
+</message>

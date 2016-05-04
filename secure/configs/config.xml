@@ -1,0 +1,196 @@
+<configuration>
+    <authentication>
+        <type comment="Options: Local/Ldap/Shibboleth Format:default[+fallbacks][:Multiple][:Colon][:Delimited]">Local+Shibboleth</type>
+		<autocreateUsers>true</autocreateUsers>
+    </authentication>
+
+    <debug comment="Options: true (available), auto(enabled), false(disabled)">true</debug>
+
+    <institution>Smith College</institution>
+    <name>Course Reserves</name>
+    <max_upload_size comment="This is INFORMATIVE only, please check your php.ini settings for the actual maximum">100 megabytes</max_upload_size>
+    
+    <stylesFolder>public/css/</stylesFolder>
+    <stylesTheme>general</stylesTheme>
+    <siteURL>https://libtools.smith.edu/rd</siteURL>
+    <serverName>https://libtools.smith.edu</serverName>
+
+    <dictionary>
+        <default_language>en</default_language>
+        <path comment="fully qualified path, or relative to APPLICATION_PATH">configs/</path>
+    </dictionary>
+
+    <database comment="This information is required">
+        <dbtype>mysql</dbtype>
+        <username comment="Max length is 16 characters">roconnell</username>
+<!--         <pwd>FUxy7GwMfCC2uJ6v</pwd> -->
+		<pwd>flip2002</pwd>
+        <host>localhost</host>
+        <dbname>reservesdirect</dbname>
+        <ssl>true</ssl>
+        <debug>false</debug>
+    </database>
+ 
+    <ils>
+        <class_name>Rd_Ils_Smith</class_name><!-- Class returned by init ILS -->
+    </ils>
+    
+    <catalog>
+        <catalogName>Smith College</catalogName>
+        <useCatalog comment="OPTIONS: yes/no; all others may be blank if 'no'">Yes</useCatalog>
+        <zhost>fcaa.library.umass.edu</zhost>
+        <zport></zport>
+        <zcisport></zcisport>
+        <ciurl comment="URL of item selection web service"></ciurl>
+        <zdb></zdb>
+        <zReflector></zReflector>
+        <reserve_script></reserve_script>
+        <holdings_script></holdings_script>
+        <display_reserve></display_reserve>
+        <uniqueIdPrefix comment="optional"/>
+        <web_search>http://fcaw.library.umass.edu/F/</web_search>
+        <textbook_search>http://fcaw.library.umass.edu/F/</textbook_search>
+        <searchUrl>http://fcaa.library.umass.edu/</searchUrl>
+        <mobile_web_search></mobile_web_search>
+        <cartIndex></cartIndex>
+        <textThis></textThis>
+        <recordDisplay>http://fcaw.library.umass.edu/F/</recordDisplay>
+    </catalog>
+
+    <cacheReports>false</cacheReports>
+
+    <ldap>
+        <host comment="host name or IP address of ldap server; 'localhost' if using stunnel">your.ldap.com</host>
+        <domain comment="domain that holds ldap user accounts">your.ldap.com</domain>
+        <port comment="'636' if connecting securely (ldaps), otherwise '389'">636</port>
+        <version comment="ldap version, usually '3'">3</version>
+        <baseDistinguishedName>dc=CHANGEME,dc=edu</baseDistinguishedName>
+        <accountBaseDistinguishedName>ou=accounts,dc=CHANGEME,dc=edu</accountBaseDistinguishedName>
+        <searchDistinguishedName>ou=people,dc=CHANGEME,dc=edu</searchDistinguishedName>
+        <searchAccount/>
+        <searchPassword/>
+        <userAttributes comment="attributes, if available, used to seed new user profile in RD">
+            <canonicalName comment="user's id (used to bind/authenticate)">uid</canonicalName>
+            <email comment="email address (optional)">primaryemail</email>
+            <firstName comment="user's first name (optional)">preferredgivenname</firstName>
+            <lastName comment="user's last name (optional)">preferredsurname</lastName>
+        </userAttributes>
+    </ldap>
+    
+    <shib>
+    	<authMode comment="optional or required">required</authMode>
+    	<idpField>Shib-Identity-Provider</idpField>
+    	<usernameField>uid</usernameField>
+		<logoutUrl>https://idp.smith.edu/idp/logout.php?callback</logoutUrl>
+		<emailField>mail</emailField>
+		<firstnameField>givenName</firstnameField>
+		<lastnameField>sn</lastnameField>
+		<displaynameField>displayName</displaynameField>
+		<patronIdField>fcIdNumber</patronIdField>
+		<membershipField>fcPersonAffiliation</membershipField>
+		<statusField></statusField>
+		<returnUrlField></returnUrlField>
+		<idps>
+			<smith>
+                <idpId>https://libtools.smith.edu/Shibboleth.sso/Logout</idpId>
+				<idpLogout>https://idp.smith.edu/idp/logout.php?callback</idpLogout>
+			</smith>	          
+		</idps>
+    </shib>
+    
+    <library_url>http://www.smith.edu</library_url>
+    <library_logo>http://www.smith.edu/libraries/sites/all/themes/smithlibraries/logo.png</library_logo>
+    <library_mobile_url>http://m.your.lib.edu/index.php</library_mobile_url>
+    <library_mobile_logo>public/images/skins/global/mobile_logo.png</library_mobile_logo>
+
+    <course_tools>
+        <flag>false</flag>
+        <url>http://CHANGEME.example.edu/widget/</url>
+        <name>rd_promo</name>
+    </course_tools>
+
+    <error_log>/var/apache2/logs/rderror.log</error_log>
+    <script_log_path>/var/www/reserves/admin/logs/</script_log_path>    
+    <errorEmail>no-reply@smith.edu</errorEmail>
+
+    <uploadErrorMessage>ERROR: If you are trying to load a very large file ([[uploadLimitSize]]) contact Reserves to add the file.</uploadErrorMessage>
+
+    <reservesEmail>reserves@smith.edu</reservesEmail>
+    <adminEmail>reserves@smith.edu</adminEmail>
+
+    <video>
+        <enabled>false</enabled>
+        <streamingServer>rtmp://CHANGEME.example.edu/vodRes</streamingServer>
+        <encoderServer comment="old busted">http://CHANGEME.example.edu/</encoderServer>
+        <encoderScript>libVideo/upload_res_file.php</encoderScript>
+        <encoderService comment="new hawtness">
+            <url>http://mxe2.CHANGEME.example.edu/mxerest/</url>
+            <authenticate>false</authenticate>
+            <username>mxeapi</username>
+            <password>CHANGEME</password>
+        </encoderService>
+        <uploadHoldingPath>/var/www/html/rd/documents/data/</uploadHoldingPath>
+    </video>
+
+    <courseware>
+            <courseware_system>
+                <name>Moodle</name>
+                <url>http://moodle.smith.edu</url>
+            </courseware_system>
+    </courseware>
+    
+    <scan>
+        <defaultScanLibrary>1</defaultScanLibrary>
+        <defaultItemGroup>ELECTRONIC</defaultItemGroup>
+    </scan>
+    
+    <documentDirectory comment="include trailing /">/var/www/html/rd/documents/uploads/</documentDirectory>
+    <dataDirectory comment="include trailing /">/var/www/html/rd/documents/document/</dataDirectory>
+    <documentURL comment="include trailing /">https://libtools.smith.edu/rd/documents/uploads/</documentURL>
+    <documentCover>./CHANGEME/copyright-cover.pdf</documentCover>  
+
+    <copyrightNoticeURL>http://www.smith.edu/libraries/services/faculty/copyright</copyrightNoticeURL>
+
+    <newUserEmail comment="This is the message automatically sent to the user when a new account is created.">
+        <subject>New Account Created</subject>
+        <msg comment="Available variables: ?deskemail = ReservesDirect email address (`reservesEmail` above); ?url = ReservesDirect URL (`siteURL` above); ?username = login name of the user being addressed; ?password = password of the user being addressed.">Welcome to Course Reserves. A new account has been created for you, or your email address has been updated. Course Reserves allows you to access all of your course materials online. For further assistance on how to use the system, click on the "Help" link, send an email to ?deskemail, or contact the reserves staff at your home library.&#13;
+&#13;
+Your username is ?username . to log in, please visit: ?url</msg>
+    </newUserEmail>
+    
+    <specialUserEmail comment="This is the message automatically sent to the user when an override password is created.">
+        <subject>Temporary Password Created</subject>
+        <msg comment="Available variables: ?deskemail = ReservesDirect email address (`reservesEmail` above); ?url = ReservesDirect URL (`siteURL` above); ?username = login name of the user being addressed; ?password = password of the user being addressed.">A temporary password has been created for you to log into the Course Reserves system. This password will allow you to access the Course Reserves system until your normal means of logging in are restored. To change your password once you log in, click on the "Edit Profile" link located at the upper right of the page. If you believe you have received this message in error, or if you did not request your password to be changed, please send an email to ?deskemail.&#13;
+&#13;
+Please log into ?url as username ?username , password ?password</msg>
+    </specialUserEmail>
+       
+    <specialUserDefaultPwd>newPwd</specialUserDefaultPwd>
+    
+    <emailRegExp comment="PREG STYLE!!!">/(.+)@(.+)/</emailRegExp>
+    <dbDateRegExp comment="PREG STYLE!!!">/[0-9]{4}-((0[1-9])|(1[0-2]))-((0[1-9])|(1[0-9])|(2[0-9])|(3[0-1]))/</dbDateRegExp>
+    
+    <request_notifier>
+        <last_run>1970-01-01</last_run>
+    </request_notifier>
+    
+    <registar_feed>
+    <activation_padding_days>14</activation_padding_days>
+    <expiration_padding_days>14</expiration_padding_days>
+    </registar_feed>
+    <EZproxyAuthorizationKey>reallybigsecret</EZproxyAuthorizationKey>
+    <BlackBoardLink></BlackBoardLink>
+    <trusted_systems comment="trusted systems id=public key element value secret key; timeout is in minutes">
+        <system id="CHANGEME" timeout="30">CHANGEME</system>
+    </trusted_systems>  
+
+    <serviceKeys>
+        <key>e8526fdcf37156a8fa50995923f90829</key>
+    </serviceKeys>
+    
+    <configurationErrorMessage>A configuration error occured.</configurationErrorMessage>
+    <supportMessage>Please contact your Helpdesk for assistance.</supportMessage>
+    <assistanceMessage>Please contact your Reserves Desk for assistance.</assistanceMessage>
+    <itAssistanceMessage>Please contact the IT Helpdesk for assistance.</itAssistanceMessage>
+      
+</configuration>

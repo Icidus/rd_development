@@ -1,0 +1,321 @@
+/* In mobile mode, the body tag has id='mobileBody', so if you need to enforce a style override,
+try descending from #mobileBody. */
+
+body#mobileBody {
+	font-family: Helvetica, Arial, sans-serif;
+	background-color: #666666;
+	background: url(../images/greyBG.gif) repeat-x scroll 0 -20px #666666;
+	color: #222;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	min-height: 300px;
+}
+
+body#mobileBody #container {
+	background-color: #666666;
+	margin: 0;
+	width: 100%;
+	border: none;
+}
+
+body#mobileBody .nav{
+	/* background-color:#FFFFFF;
+	border-bottom:1px solid #C3CFD9;
+	color:#000000;
+	font-weight:normal; */
+	margin:10px;
+	padding:0;
+}
+
+body#mobileBody .iconBlock{
+	padding: 0 0 0 5px;
+}
+
+#address{
+	background-color: #666666;
+	border-top: 1px solid #CCCCCC;
+	color: #FFFFFF;
+	padding: 5px 0;
+	text-align: center;
+	width: 100%;
+	font: 62.5% Helvetica, Arial, sans-serif;
+}
+
+body#mobileBody .login{
+	color: #FFFFFF;
+}
+
+
+body#mobileBody .loginTitle{
+	color: #FFFFFF;
+	margin-left: 30px;
+}
+
+body#mobileBody .loginInput{
+	width: 248px;
+	border: medium none;
+	padding: 6px 4px 8px 9px;
+	height: 22px;
+	line-height: 24px;
+	font-size: 17px;
+	color: #222233;
+}
+body#mobileBody .mobileNote{
+	color: #FFFFFF;
+	font-size: 14px;
+}
+
+body#mobileBody > table {
+	margin-top: 5px;
+}
+
+body#mobileBody h1.loginTitle {
+	display: none;
+}
+
+body#mobileBody div.bannerM, body#mobileBody div.footerM {
+	text-align: center;
+	width: 100%;
+	background-color: #CC0000;
+	color: #FFFFFF;
+	margin: 0;
+}
+
+body#mobileBody .bannerMNew {
+	background: url("../images/redBG.gif") repeat-x scroll 0 -20px #CC0000;
+	border: 0 none;
+	font-size: 16px;
+	height: 41px;
+	line-height: 16px;
+	margin: 0;
+	padding-left: 0;
+}
+
+body#mobileBody ul#breadcrumbs{
+	display: inline;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+
+body#mobileBody ul#breadcrumbs li{
+	color: #FFFFFF;
+	display: inline;
+	font-weight: bold;
+	line-height: 47px;
+	padding: 0 5px;
+}
+
+body#mobileBody ul#breadcrumbs li a{
+	color: #FFFFFF;
+	text-decoration: none;
+	display: inline;
+	border: none;
+	padding: 0;
+	margin-bottom: 0;
+	background-color: #CC0000;
+	
+}
+
+body#mobileBody ul#breadcrumbs li a img{
+	border: none;
+}
+
+body#mobileBody ul#breadcrumbs li.separator{
+	padding: 0;
+}
+
+body#mobileBody div.footerM {
+	bottom: 0px;
+}
+
+body#mobileBody div.footerM div.footerMContainer {
+	text-align: center;
+}
+
+body#mobileBody div.footerM div.footerMContainer a {
+	font-size: small;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+body#mobileBody div.bannerM {
+	top: 0px;
+	min-height: 41px;
+}
+
+
+body#mobileBody div.bannerMControl a {
+	text-decoration: underline;
+	color: #FFFFFF;
+	font-size: small;
+}
+
+body#mobileBody div.bannerMControl a img {
+	border: none;
+	/* margin: 0 3px; */
+}
+
+body#mobileBody div.bannerM div, body#mobileBody div.footerM div{
+	padding-left: 5 px;
+}
+
+body#mobileBody  div.bannerM div.clear{
+	font-size: 1%;
+	clear: both;
+	padding: 0;
+}
+
+body#mobileBody div.bannerM div * {
+	padding: 0 5px;
+	border: none;
+}
+
+body#mobileBody .bannerMLeftContainer {
+	float: left;
+	padding-top: 8px;d
+	/* width: 55px; */
+}
+
+body#mobileBody .bannerMLeftContainer img {
+	vertical-align: middle;
+	margin: 0, 2px;
+}
+
+body#mobileBody .bannerMRightContainer {
+	float: right;
+	height: 20px;
+	padding-right: 14px;
+	padding-top: 10px;
+	 
+}
+
+body#mobileBody .classTitle{
+	text-align: center;
+	font-weight: bold;
+}
+
+body#mobileBody .bannerMHeadline {
+	text-align: center;
+	padding-top: 9px;
+}
+
+body#mobileBody .courseTitle {	
+	font-weight: bold;
+	font-size: medium;
+	color: #FFFFFF;
+	font-variant: normal;
+} 
+
+body#mobileBody div.bannerM div.bannerMClear {
+	clear: both;
+	padding: 0;
+	margin: 0;
+	font-size: 1%;
+}
+
+body#mobileBody #content{
+	margin: 0;
+	padding: 0;
+	background-color: #666;
+	border: 0;
+}
+
+body#mobileBody ul{
+	list-style: none;
+	margin: 5px;
+	padding: 0;	
+}	
+
+body#mobileBody tr td{
+	font-size: 1.2em;
+}
+
+body#mobileBody .className{
+	font-weight: normal;
+}
+
+body#mobileBody .classInfo{
+	color: #404649;
+	font-weight: normal;
+	line-height: 17px;
+	font-size: 14px;
+}
+
+body#mobileBody ul li a{
+	background-color: #fff;
+	border: 1px solid #C3CFD9;
+	color: #222;
+	display: block;
+	font-size: small;
+	/* font-weight: bold; */
+	/* margin-bottom: -1px; */
+	padding: 8px 25px 8px 8px;
+	text-decoration: none;
+	line-height: 1.2em;
+	margin-bottom: -1px;
+	
+}
+body#mobileBody .headingCell2{
+	margin-bottom: -1px;
+}
+
+body#mobileBody ul li:first-child a{
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+}
+
+body#mobileBody ul li:last-child a{
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+}
+
+body#mobileBody ul li a:active, ul li a:hover {
+	background-color: blue;
+	color:white;
+}
+
+body#mobileBody .arrow{
+	background-image: url("../images/action-arrow.png");
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+body#mobileBody .itemMetaPre {
+	font-size: small;
+}
+
+body#mobileBody .itemMeta {
+	font-size: small;
+}
+
+body#mobileBody .checkBox-right {
+	float: right;
+	margin: 0;
+	padding-right: 15px;
+	padding-top: 10px;
+	width: 5px;
+}
+
+body#mobileBody .metaBlock-wide {
+	padding: 0 0 0 0;
+	margin-left: 35px;
+	margin-right: 0px; 
+}
+
+body#mobileBody .title {
+	font-size: small;
+	font-weight: bold;
+}
+
+body#mobileBody .reserveList {
+	margin: 10px;
+}
+
+body#mobileBody .itemTitleNoLink {
+	font-size: small;
+}
+
+body#mobileBody div.bannerM div .spacer{
+	padding: 0;
+}

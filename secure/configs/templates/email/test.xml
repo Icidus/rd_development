@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+	<to>{{userEmail}}</to>
+	<from>{{supportEmail}}</from>
+	<subject>Testing Email Functionality</subject>
+	<body>This message is to test Email Functionality for {{instanceName}} at {{institutionName}}. 
+	
+If you received this message, the system is able to send e-mail.</body>
+</template>

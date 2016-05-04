@@ -1,0 +1,7 @@
+<message>
+	<preview>resume a timed job</preview>
+	<template>
+{{xmlDecl}}
+<resumeTimedJob id="{jobId}"></resumeTimedJob>
+</template>
+</message>

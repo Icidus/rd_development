@@ -1,0 +1,154 @@
+/* general mobile interface styles */
+
+/* adds white box around content */
+div.focal {
+	margin: 15px 0 15px 0;
+	padding: 4px 10px 4px 10px;
+	background: #F9F9F9;
+	-moz-border-radius: .4em;
+	border-radius: .4em;
+	border: 1px solid #CCCCCC;
+}
+
+/* formats text in focal div */
+div.focal h1, div.focal h2, div.focal h3, div.focal p {
+	margin: 0;
+	padding: 5px 0 5px 0;
+}
+
+/* formats search box in focal div */
+.focal .ui-input-search, .focal .ui-input-text {
+  margin: 15px 0 15px 0;
+}
+
+/* formats buttons in focal div */
+.focal div.buttons .ui-btn {
+	margin: 0 0 15px 0;
+}
+
+/* moves top content closer to header bar */
+div.reducedMargin {
+	padding-top: 0px;
+}
+
+
+/* improves format of results lists */
+.results .ui-li .ui-btn-inner a.ui-link-inherit, 
+.results .ui-li-static.ui-li { /* use to reduce whitespace around results lists */
+	padding: .1em 15px .1em 15px;
+}
+
+ul.results.ui-listview {
+	margin:15px -15px 35px -15px;
+}
+
+/* Add class to a list to format p tags */
+.listWithSubtext p {
+	font-size: .9em;
+	font-weight: bold;
+	margin-right: 15px;
+}
+
+/* reduces size of text; adds blue color */
+span.smallprint { 
+	font-size: .9em;
+	color: #627ba1;
+}
+
+span.plainsmallprint {
+	font-size: .9em;
+}
+
+.notruncate { /* prevents jQuery truncation of text in lists */
+	white-space: normal;
+}
+
+.clear {
+	clear: right;
+}
+
+/* alignment fix for doctype images */
+.thumb {
+	float:left;
+	margin-top: .4 em;
+	margin-right: 10 px;
+}
+
+/* reduces the top margin of a specific list */
+#firstList {
+	margin-top: 0px;
+}
+
+/* centers the text for the full course reserves link */
+#fullsitelink {
+	text-align: center;
+}
+
+/* narrows the login form a bit */
+.loginForm {
+	width: 80%;
+	margin: 0px auto;
+}
+
+/* Header Images */
+
+img.subpageLogo {
+	width:60px;
+	margin: 0 0 16px -10px;
+	float: left:
+}
+
+
+/* jQuery Mobile CSS Default Overrides */
+
+.ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-thumb {
+	min-height: 15px;
+	padding-left: 45px;
+}
+
+
+.ui-li-thumb {
+	max-width: 50px;
+	max-height: 40px;
+}
+
+.ui-bar-a {
+	text-shadow: none;
+}
+
+.ui-header .ui-title {
+	min-height: 22px;
+	font-size: 18px;
+	text-align: left;
+	margin: 15px 15px 4px 70px;
+	padding: 0;
+}
+
+.ui-header {
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px 0px;
+}
+
+.ui-collapsible-heading, .ui-collapsible-content {
+	margin-left: 0;
+ 	margin-right: 0;
+}
+
+h3.ui-collapsible-heading .ui-btn {
+	margin-bottom: 0px;
+}
+
+input.ui-input-text, textarea.ui-input-text {
+  width: 100%;
+}
+
+.ui-footer a.ui-btn {
+	text-align: center;
+	display: block;
+	margin: 10px auto 10px auto;
+	max-width: 230px;
+}
+
+span.ui-btn-inner {
+	text-align:center;
+}

@@ -1,0 +1,7 @@
+<message>
+	<preview>retry a job</preview>
+	<template>
+{{xmlDecl}}
+<stopJob id="{jobId}"></stopJob>
+</template>
+</message>
